@@ -6,7 +6,7 @@ print("yahoo"'\n'
       "aol"'\n'
       "write any domail")
 email = input("domain : ")
-m = int(input("How many emails: "))
+mail = int(input("How many emails: "))
 done = 0
 li = 0
 lst = open("email.txt", "w")

@@ -63,12 +63,12 @@ while True:
 
     response = requests.post('https://login.yahoo.com/account/create', params=params, cookies=cookies, headers=headers, data=data).text
     if ("Add your phone number") in response:
-        print(f"Available Email : {email}@yahoo.com")
+        print(f"Available Email : {email}")
         with open("Available.txt","a") as Available:
             Available.write(email +"\n")
     elif ("This email address is not available for sign up") in response:
-        print(f"NotAvailable Email : {email}@yahoo.com")
+        print(f"NotAvailable Email : {email}")
         with open("NotAvailable.txt","a") as NotAvailable:
             NotAvailable.write(email +"\n")
     else:
-        print(f"Error Email : {email}@yahoo.com")
+        print(f"Error Email : {email}")
